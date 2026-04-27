@@ -125,3 +125,5 @@ CREATE TABLE parts (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+ALTER TABLE customers CHANGE name first_name VARCHAR(50);
+ALTER TABLE customers ADD COLUMN last_name VARCHAR(50) AFTER first_name;
