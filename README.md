@@ -67,6 +67,10 @@ Role-based access control (RBAC)
 Reporting & analytics dashboard
 REST API integration
 
+## 📊 Views
+
+- v_customer_cars → Shows customers with their cars (JOINed data)
+
 ## 🗺️ ERD Diagram
 
 ![ERD Diagram](docs/ERD.png)
