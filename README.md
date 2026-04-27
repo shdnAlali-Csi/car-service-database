@@ -86,6 +86,24 @@ These queries cover:
 
 - v_customer_cars → Shows customers with their cars (JOINed data)
 
+
+## ⚙️ Database Triggers
+
+This project includes advanced MySQL triggers that implement real-world business logic and automation:
+
+- Automatic invoice calculation per appointment
+- Payment validation rules based on business status
+- Automatic status updates after payments
+- Audit logging system for tracking operations
+- Data integrity protection for relational safety
+- Automatic timestamp updates on record modification
+
+These triggers simulate enterprise-level database behavior and ensure:
+- Data consistency
+- Business rule enforcement
+- System automation
+- Auditability and traceability
+- 
 ## 🗺️ ERD Diagram
 
 ![ERD Diagram](docs/ERD.png)
