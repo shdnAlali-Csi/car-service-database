@@ -118,6 +118,18 @@ The database includes advanced stored procedures that simulate real-world busine
 
 These procedures represent a full business logic layer inside the database, making the system behave like a real backend service.
 
+## ⚡ Database Indexing
+
+The database includes advanced indexing strategies to optimize performance:
+
+- Fast search operations (phone, email, plate number)
+- Optimized JOIN performance across tables
+- Efficient filtering for dashboard queries
+- Composite indexes for analytical queries
+- Financial reporting optimization
+
+These indexes significantly improve query performance and simulate production-level database optimization.
+
 ## 🗺️ ERD Diagram
 
 ![ERD Diagram](docs/ERD.png)
