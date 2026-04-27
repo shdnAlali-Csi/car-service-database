@@ -1,37 +1,75 @@
 🚗 Car Service Database
+🏢 Enterprise Database System
 
-A well-structured relational database system designed to manage car service centers efficiently, including customers, vehicles, services, and financial operations.
+A scalable and well-structured relational database system designed to support enterprise-level car service management operations.
+The system ensures high data integrity, normalization, and efficient handling of customers, vehicles, services, and financial transactions.
 
-📌 Overview
+📌 Executive Summary
 
-This project provides a clean and scalable database schema for handling daily operations in car service workshops, ensuring organized data management and easy extensibility.
+This project models a real-world car service management platform used in workshops and service centers.
+It is designed following relational database best practices to ensure:
 
-✨ Features
-👤 Customer management
-🚘 Vehicle tracking per customer
-📅 Appointment scheduling system
-🔧 Service catalog and history
-💳 Payment tracking and records
-📊 Structured relational design (normalized)
-🗂️ Database Structure
+Data consistency
+Scalability
+Maintainability
+Extensibility for future system integrations
+🧩 System Architecture
 
-The system is built using relational principles with tables such as:
+The database is built using a fully relational structure, supporting core operational workflows:
+
+Customer lifecycle management
+Vehicle ownership tracking
+Service appointment scheduling
+Service execution tracking
+Payment processing and history
+🗺️ Entity Relationship Diagram (ERD)
+
+This diagram represents the complete relational structure of the system.
+
+
+✨ Core Features
+👤 Customer relationship management (CRM)
+🚘 Multi-vehicle support per customer
+📅 Appointment scheduling and tracking
+🔧 Service catalog with pricing structure
+🧾 Order processing and service execution tracking
+💳 Payment management and transaction history
+📊 Fully normalized relational schema
+🗂️ Database Schema
+
+Main entities:
 
 Customers
 Cars
 Appointments
 Services
+Service Orders
 Payments
-🛠️ Technologies
-MySQL
-SQL (DDL & DML)
-Relational Database Design
-🎯 Purpose
+Order Services (junction table)
+🛠️ Technology Stack
+MySQL 8+
+SQL (DDL, DML, Constraints)
+Relational Database Design Principles
+ER Modeling
+🎯 Business Purpose
 
-The goal of this project is to simulate a real-world car service management system that can be used as a foundation for backend systems or enterprise applications.
+This system is designed to simulate a production-ready backend database for:
 
-🚀 Future Improvements
-Add stored procedures for automation
-Implement reporting dashboards
-Integrate with a backend API (Node.js / Laravel / Flutter)
-Add authentication & roles system
+Automotive service centers
+Workshop management systems
+ERP-like service modules
+
+It can be integrated into backend applications (Node.js, Laravel, Spring Boot, or Flutter apps).
+
+🚀 Future Enhancements
+Stored Procedures for automation workflows
+Role-based access control (RBAC)
+Reporting & analytics dashboard
+REST API integration
+Mobile application support
+Audit logging system
+
+🏁 Status
+✔ Stable database schema
+✔ Normalized design (3NF)
+✔ Ready for backend integration
