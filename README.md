@@ -67,6 +67,21 @@ Role-based access control (RBAC)
 Reporting & analytics dashboard
 REST API integration
 
+## 📊 Dashboard Queries
+
+This project provides **10 business intelligence SQL queries** designed to simulate a real-world analytics dashboard for a car service management system.
+
+These queries cover:
+
+- Key Performance Indicators (KPIs)
+- Revenue analysis
+- Operational performance metrics
+- Customer behavior insights
+- Branch-level analytics
+- Service demand tracking
+- Payment method distribution
+- Vehicle service frequency analysis
+
 ## 📊 Views
 
 - v_customer_cars → Shows customers with their cars (JOINed data)
