@@ -103,7 +103,21 @@ These triggers simulate enterprise-level database behavior and ensure:
 - Business rule enforcement
 - System automation
 - Auditability and traceability
-- 
+
+## ⚙️ Stored Procedures
+
+The database includes advanced stored procedures that simulate real-world business operations:
+
+- Appointment creation and management
+- Service assignment to appointments
+- Payment processing
+- Customer analytics and summaries
+- Branch performance reporting
+- Customer search functionality
+- Appointment status management
+
+These procedures represent a full business logic layer inside the database, making the system behave like a real backend service.
+
 ## 🗺️ ERD Diagram
 
 ![ERD Diagram](docs/ERD.png)
