@@ -66,6 +66,10 @@ Stored Procedures for automation workflows
 Role-based access control (RBAC)
 Reporting & analytics dashboard
 REST API integration
+
+## 🗺️ ERD Diagram
+
+![ERD Diagram](docs/erd.png)
 Mobile application support
 Audit logging system
 
