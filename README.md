@@ -69,7 +69,7 @@ REST API integration
 
 ## 🗺️ ERD Diagram
 
-![ERD Diagram](docs/erd.png)
+![ERD Diagram](docs/ERD.png)
 Mobile application support
 Audit logging system
 
