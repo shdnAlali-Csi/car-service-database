@@ -56,24 +56,32 @@ To maintain financial integrity, the system prevents any payment entry unless th
 code
 SQL
 ~
+
 CREATE TRIGGER trg_payment_validation
+
 BEFORE INSERT ON payments
+
 FOR EACH ROW
+
 BEGIN
+   
     DECLARE appt_status VARCHAR(50);
+   
     SELECT status INTO appt_status FROM appointments WHERE appointment_id = NEW.appointment_id;
 
     IF appt_status != 'completed' THEN
+       
         SIGNAL SQLSTATE '45000'
+        
         SET MESSAGE_TEXT = 'Payment allowed only for completed appointments';
-    END IF;
+     
+     END IF;
 END;
 ~
 Verification:
-| ❌ Blocked (Invalid Status) | ✅ Successful (Completed Status) |
-
+| ❌ Blocked (Invalid Status) | 
 ![alt text](docs/images/payment-trigger-validation-error.png)
-|
+| ✅ Successful (Completed Status) |
 ![alt text](docs/images/payment-success-completed-appointment.png)
 
 2. High-Performance Indexing Strategy
