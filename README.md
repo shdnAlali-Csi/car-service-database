@@ -25,12 +25,15 @@ The system utilizes a sophisticated relational schema to handle complex many-to-
 ![alt text](docs/ERD.png)
 
 ⚡ Advanced Database Engineering Features
+
 1. Automated Business Logic (Triggers)
 The system moves critical business rules to the database layer to ensure data consistency regardless of the frontend used.
 A. Real-time Financial Calculation
 This trigger ensures that the total_amount in the appointments table is always synchronized with the services added, eliminating manual calculation errors.
+
 code
 SQL
+~
 CREATE TRIGGER trg_update_total_amount
 AFTER INSERT ON appointment_services
 FOR EACH ROW
@@ -39,18 +42,20 @@ BEGIN
     SET total_amount = total_amount + NEW.actual_price
     WHERE appointment_id = NEW.appointment_id;
 END;
+~
 Verification:
 | Before Service Addition | After Service Addition |
-| :--- | :--- |
-|
+
 ![alt text](docs/images/trigger-total-before.png)
 |
 ![alt text](docs/images/trigger-total-success.png)
-|
+
 B. Strict Workflow Enforcement (Payment Validation)
 To maintain financial integrity, the system prevents any payment entry unless the appointment status is explicitly set to 'completed'.
+
 code
 SQL
+~
 CREATE TRIGGER trg_payment_validation
 BEFORE INSERT ON payments
 FOR EACH ROW
@@ -63,14 +68,14 @@ BEGIN
         SET MESSAGE_TEXT = 'Payment allowed only for completed appointments';
     END IF;
 END;
+~
 Verification:
 | ❌ Blocked (Invalid Status) | ✅ Successful (Completed Status) |
-| :--- | :--- |
-|
+
 ![alt text](docs/images/payment-trigger-validation-error.png)
 |
 ![alt text](docs/images/payment-success-completed-appointment.png)
-|
+
 2. High-Performance Indexing Strategy
 To support enterprise-level data volumes, the schema includes:
 B-Tree Indexes on high-cardinality columns (Phone, Email, Plate Number).
