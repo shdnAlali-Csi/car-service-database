@@ -44,6 +44,7 @@ AFTER INSERT ON appointment_services
 FOR EACH ROW
 
 BEGIN
+
     UPDATE appointments
     
     SET total_amount = total_amount + NEW.actual_price
