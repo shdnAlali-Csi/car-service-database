@@ -34,20 +34,31 @@ This trigger ensures that the total_amount in the appointments table is always s
 code
 SQL
 ~
+
 CREATE TRIGGER trg_update_total_amount
+
 AFTER INSERT ON appointment_services
+
 FOR EACH ROW
-BEGIN
-    UPDATE appointments
-    SET total_amount = total_amount + NEW.actual_price
-    WHERE appointment_id = NEW.appointment_id;
+ 
+ BEGIN
+  
+     UPDATE appointments
+     
+     SET total_amount = total_amount + NEW.actual_price
+     
+     WHERE appointment_id = NEW.appointment_id;
+
 END;
+
 ~
 Verification:
-| Before Service Addition | After Service Addition |
+| Before Service Addition |
 
 ![alt text](docs/images/trigger-total-before.png)
-|
+
+| After Service Addition |
+
 ![alt text](docs/images/trigger-total-success.png)
 
 B. Strict Workflow Enforcement (Payment Validation)
