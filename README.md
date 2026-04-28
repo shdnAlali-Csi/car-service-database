@@ -27,11 +27,15 @@ A. Real-time Financial Calculation
 This trigger ensures that the total_amount in the appointments table is always synchronized with the services added, eliminating manual calculation errors.
 code
 SQL
+BEGIN
 DELIMITER $$
 
 CREATE TRIGGER trg_update_total_amount
+
 AFTER INSERT ON appointment_services
+
 FOR EACH ROW
+
 BEGIN
     UPDATE appointments
     SET total_amount = total_amount + NEW.actual_price
@@ -39,6 +43,7 @@ BEGIN
 END $$
 
 DELIMITER ;
+END
 Verification:
 Before Service Addition	After Service Addition
 ![alt text](docs/images/trigger-total-before.png)
