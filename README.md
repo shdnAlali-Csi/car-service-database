@@ -12,6 +12,7 @@ The Enterprise Car Service Management System (ECS-MS) is a robust, scalable, and
 This project demonstrates advanced database engineering principles, including automated business logic via triggers, optimized query performance through strategic indexing, and comprehensive data integrity constraints.
  System Architecture & Design Philosophy
 The architecture follows a modular approach to ensure high cohesion and low coupling between business entities.
+
 🔹 Core Modules:
 CRM Module: Advanced customer and multi-vehicle ownership tracking.
 Operations Engine: Real-time appointment scheduling and service status lifecycle.
@@ -26,6 +27,7 @@ Optimization: Composite Indexing & Execution Plan Tuning.
 🗺️ Entity Relationship Diagram (ERD)
 The system utilizes a sophisticated relational schema to handle complex many-to-many relationships (e.g., Service Orders to Catalog Services).
 ![alt text](docs/ERD.png)
+
 ⚡ Advanced Database Engineering Features
 1. Automated Business Logic (Triggers)
 The system moves critical business rules to the database layer to ensure data consistency regardless of the frontend used:
@@ -48,10 +50,13 @@ Revenue Metrics: Monthly Recurring Revenue (MRR) and Average Order Value (AOV).
 Operational Efficiency: Service turnaround time and technician workload.
 Customer Retention: Frequency of visits and vehicle health trends.
 Financial Health: Payment method distribution and outstanding receivables.
+
 🛡️ Security & Data Integrity
 Referential Integrity: Strict FOREIGN KEY constraints with ON DELETE RESTRICT to prevent accidental data loss.
 Data Validation: CHECK constraints and Trigger-based validation to ensure "Clean Data" entry.
 View-Based Security: v_customer_cars and other views to abstract sensitive underlying table structures.
+
+
 🚀 Roadmap & Future Scalability
 
 RBAC Implementation: Role-Based Access Control at the database level.
@@ -61,6 +66,7 @@ Partitioning: Horizontal partitioning for the Payments and Service_Orders tables
 API Integration: RESTful wrapper using Node.js/Sequelize or Python/SQLAlchemy.
 
 Event Scheduler: Automated database maintenance and daily summary reports.
+
 👨‍💻 Technical Contribution
 This project serves as a blueprint for developers looking to implement a professional-grade backend for:
 Automotive ERP Systems
