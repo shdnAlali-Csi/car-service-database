@@ -69,6 +69,9 @@ Event Scheduler: Automated database maintenance and daily summary reports.
 
 👨‍💻 Technical Contribution
 This project serves as a blueprint for developers looking to implement a professional-grade backend for:
+
 Automotive ERP Systems
+
 Workshop Management Platforms
+
 SaaS Service Solutions
