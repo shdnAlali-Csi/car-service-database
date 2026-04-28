@@ -33,28 +33,6 @@ The system utilizes a sophisticated relational schema to handle complex many-to-
 A. Real-time Financial Calculation
 This trigger ensures that the total_amount in the appointments table is always synchronized with the services added, eliminating manual calculation errors.
 
-code
-SQL
-
-DELIMITER $$
-
-CREATE TRIGGER trg_update_total_amount
-
-AFTER INSERT ON appointment_services
-
-FOR EACH ROW
-
-BEGIN
-
-    UPDATE appointments
-    
-    SET total_amount = total_amount + NEW.actual_price
-    
-    WHERE appointment_id = NEW.appointment_id;
-    
-END $$
-
-DELIMITER ;
 
 Verification:
 
@@ -66,27 +44,6 @@ After Service Addition
 
 B. Strict Workflow Enforcement (Payment Validation)
 To maintain financial integrity, the system prevents any payment entry unless the appointment status is explicitly set to 'completed'.
-code
-SQL
-DELIMITER $$
-
-CREATE TRIGGER trg_payment_validation
-BEFORE INSERT ON payments
-FOR EACH ROW
-BEGIN
-    DECLARE appt_status VARCHAR(50);
-    
-    SELECT status INTO appt_status 
-    FROM appointments 
-    WHERE appointment_id = NEW.appointment_id;
-
-    IF appt_status != 'completed' THEN
-        SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Payment allowed only for completed appointments';
-    END IF;
-END $$
-
-DELIMITER ;
 
 Verification:
 
