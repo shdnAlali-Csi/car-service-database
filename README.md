@@ -26,7 +26,6 @@ Optimization: Composite Indexing & Execution Plan Tuning.
 🗺️ Entity Relationship Diagram (ERD)
 The system utilizes a sophisticated relational schema to handle complex many-to-many relationships (e.g., Service Orders to Catalog Services).
 ![alt text](docs/ERD.png)
-(Ensure your image link is correct)
 ⚡ Advanced Database Engineering Features
 1. Automated Business Logic (Triggers)
 The system moves critical business rules to the database layer to ensure data consistency regardless of the frontend used:
