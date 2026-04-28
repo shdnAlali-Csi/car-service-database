@@ -5,10 +5,11 @@ High-Performance Relational Database Engine for Automotive Operations
 ![alt text](https://img.shields.io/badge/Schema-3NF%20Normalized-green?style=for-the-badge)
 
 ![alt text](https://img.shields.io/badge/Status-Production--Ready-success?style=for-the-badge)
+
 📌 Executive Overview
 The Enterprise Car Service Management System (ECS-MS) is a robust, scalable, and fully normalized relational database solution designed to streamline complex automotive service workflows. Built with ACID compliance at its core, the system manages the entire lifecycle of customer relations, vehicle diagnostics, service execution, and financial reconciliation.
 This project demonstrates advanced database engineering principles, including automated business logic via triggers, optimized query performance through strategic indexing, and comprehensive data integrity constraints.
-🏗️ System Architecture & Design Philosophy
+ System Architecture & Design Philosophy
 The architecture follows a modular approach to ensure high cohesion and low coupling between business entities.
 🔹 Core Modules:
 CRM Module: Advanced customer and multi-vehicle ownership tracking.
@@ -20,6 +21,7 @@ Engine: MySQL 8.0+ (InnoDB Engine for Transactional Integrity)
 Design: 3rd Normal Form (3NF) to eliminate data redundancy.
 Logic: Server-side Stored Procedures & Triggers for "Fat Database" architecture.
 Optimization: Composite Indexing & Execution Plan Tuning.
+
 🗺️ Entity Relationship Diagram (ERD)
 The system utilizes a sophisticated relational schema to handle complex many-to-many relationships (e.g., Service Orders to Catalog Services).
 ![alt text](docs/ERD.png)
