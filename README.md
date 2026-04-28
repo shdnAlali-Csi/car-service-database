@@ -38,8 +38,10 @@ Verification:
 
 Before Service Addition	
 
-After Service Addition
 ![alt text](docs/images/trigger-total-before.png)
+
+After Service Addition
+
 ![alt text](docs/images/trigger-total-success.png)
 
 B. Strict Workflow Enforcement (Payment Validation)
@@ -49,13 +51,15 @@ Verification:
 
 ❌ Blocked (Invalid Status)	
 
-✅ Successful (Completed Status)
 ![alt text](docs/images/payment-trigger-validation-error.png)
+
+✅ Successful (Completed Status)
+
 ![alt text](docs/images/payment-success-completed-appointment.png)
 
 2. High-Performance Indexing Strategy
-3. 
-To support enterprise-level data volumes, the schema includes:
+
+3. To support enterprise-level data volumes, the schema includes:
 
 B-Tree Indexes on high-cardinality columns (Phone, Email, Plate Number).
 
