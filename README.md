@@ -59,7 +59,7 @@ Verification:
 
 2. High-Performance Indexing Strategy
 
-3. To support enterprise-level data volumes, the schema includes:
+ To support enterprise-level data volumes, the schema includes:
 
 B-Tree Indexes on high-cardinality columns (Phone, Email, Plate Number).
 
@@ -67,7 +67,7 @@ Composite Indexes for optimized multi-column filtering in dashboard queries.
 
 Foreign Key Optimization to ensure rapid JOIN operations across the core tables.
 
-4. Encapsulated Business Logic (Stored Procedures)
+3. Encapsulated Business Logic (Stored Procedures)
 Complex operations are abstracted into reusable procedures to reduce network latency and enhance security:
 
 sp_CreateAppointment: Atomic transaction handling for new bookings.
