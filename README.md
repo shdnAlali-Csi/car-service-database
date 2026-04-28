@@ -104,6 +104,8 @@ These triggers simulate enterprise-level database behavior and ensure:
 - System automation
 - Auditability and traceability
 
+## 💳 Payment Validation Trigger ### ❌ Blocked Payment (Before Completion) ![Error](docs/images/payment-error.png) ### ✅ Successful Payment (After Completion) ![Success](docs/images/payment-success-completed-appointment.png) ✔ Payment is only allowed when appointment status = completed
+
 ## ⚙️ Stored Procedures
 
 The database includes advanced stored procedures that simulate real-world business operations:
