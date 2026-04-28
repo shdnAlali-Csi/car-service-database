@@ -25,9 +25,12 @@ The system utilizes a sophisticated relational schema to handle complex many-to-
 The system moves critical business rules to the database layer to ensure data consistency regardless of the frontend used.
 A. Real-time Financial Calculation
 This trigger ensures that the total_amount in the appointments table is always synchronized with the services added, eliminating manual calculation errors.
+
 code
 SQL
+
 BEGIN
+
 DELIMITER $$
 
 CREATE TRIGGER trg_update_total_amount
