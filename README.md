@@ -28,7 +28,9 @@ The system utilizes a sophisticated relational schema to handle complex many-to-
 ⚡ Advanced Database Engineering Features
 
 1. Automated Business Logic (Triggers)
+2. 
 The system moves critical business rules to the database layer to ensure data consistency regardless of the frontend used.
+
 A. Real-time Financial Calculation
 This trigger ensures that the total_amount in the appointments table is always synchronized with the services added, eliminating manual calculation errors.
 
@@ -57,7 +59,9 @@ DELIMITER ;
 
 Verification:
 
-Before Service Addition	After Service Addition
+Before Service Addition	
+
+After Service Addition
 ![alt text](docs/images/trigger-total-before.png)
 ![alt text](docs/images/trigger-total-success.png)
 
@@ -87,46 +91,65 @@ DELIMITER ;
 
 Verification:
 
-❌ Blocked (Invalid Status)	✅ Successful (Completed Status)
+❌ Blocked (Invalid Status)	
+
+✅ Successful (Completed Status)
 ![alt text](docs/images/payment-trigger-validation-error.png)
 ![alt text](docs/images/payment-success-completed-appointment.png)
 
 2. High-Performance Indexing Strategy
+3. 
 To support enterprise-level data volumes, the schema includes:
+
 B-Tree Indexes on high-cardinality columns (Phone, Email, Plate Number).
+
 Composite Indexes for optimized multi-column filtering in dashboard queries.
+
 Foreign Key Optimization to ensure rapid JOIN operations across the core tables.
 
 4. Encapsulated Business Logic (Stored Procedures)
 Complex operations are abstracted into reusable procedures to reduce network latency and enhance security:
+
 sp_CreateAppointment: Atomic transaction handling for new bookings.
+
 sp_ProcessPayment: Secure payment handling with status synchronization.
+
 sp_GetBranchPerformance: Aggregated analytics for management reporting.
 
 📊 Business Intelligence & Analytics
 
 The system includes 10+ Production-Grade SQL Queries designed for executive dashboards, providing insights into:
+
 Revenue Metrics: Monthly Recurring Revenue (MRR) and Average Order Value (AOV).
+
 Operational Efficiency: Service turnaround time and technician workload.
+
 Customer Retention: Frequency of visits and vehicle health trends.
+
 Financial Health: Payment method distribution and outstanding receivables.
 
 🛡️ Security & Data Integrity
 
 Referential Integrity: Strict FOREIGN KEY constraints with ON DELETE RESTRICT to prevent accidental data loss.
+
 Data Validation: CHECK constraints and Trigger-based validation to ensure "Clean Data" entry.
+
 View-Based Security: v_customer_cars and other views to abstract sensitive underlying table structures.
 
 🚀 Roadmap & Future Scalability
 
 RBAC Implementation: Role-Based Access Control at the database level.
+
 Partitioning: Horizontal partitioning for the Payments table to handle millions of records.
+
 API Integration: RESTful wrapper using Node.js/Sequelize or Python/FastAPI.
+
 Event Scheduler: Automated database maintenance and daily summary reports.
 
 👨‍💻 Technical Contribution
 
 This project serves as a blueprint for developers looking to implement a professional-grade backend for:
+
  Automotive ERP Systems
  
  Workshop Management Platforms
